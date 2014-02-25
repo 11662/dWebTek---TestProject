@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Batroll'd</title>
+
+<script type="text/javascript">
+function reloadFunction()
+{
+	history.go(0);
+}
+</script>
+
+<style>
+div 
+{
+ width:300px; 
+ height:200px; 
+ animation-name: myfirst;
+ position: relative;
+ animation-duration: 3s;
+ animation-timing-function: linear;
+ animation-iteration-count: infinite;
+ animation-play-state: running;
+}
+
+@keyframes myfirst
+ {
+ 0%   {background: red; left:0px; top:0px;}
+ 25%  {background: yellow; left:200px; top:0px; transform: rotate(90deg);}
+ 50%  {background: blue; left:200px; top:200px; transform: rotate(180deg);}
+ 75%  {background: green; left:0px; top:200px; transform: rotate(270deg);}
+ 100% {background: red; left:0px; top:0px; transform: rotate(360deg);}
+ }
+
+</style>
+</head>
+<body>
+	<input value="Restart" type="button" onClick="history.go(0)"> 	
+	
+	<audio id="batMusic" loop="loop" autoplay="autoplay">
+		<source src="Batroll'd.mp3">
+	</audio>
+	
+	<div id="batDiv">
+	<h1>Batroll'd</h1>
+	<img id="imgBat" src="robin-batman-rollin.gif">
+	</div>
+
+</body>
+</html>
